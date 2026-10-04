@@ -1,0 +1,94 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php: "8.3"
+            laravel: "11.*"
+            testbench: "9.*"
+            pest: "^3.7"
+            pest-plugin: "^3.1"
+          - php: "8.3"
+            laravel: "12.*"
+            testbench: "10.*"
+            pest: "^4.0"
+            pest-plugin: "^4.0"
+          - php: "8.3"
+            laravel: "13.*"
+            testbench: "11.*"
+            pest: "^4.0"
+            pest-plugin: "^4.0"
+          - php: "8.4"
+            laravel: "11.*"
+            testbench: "9.*"
+            pest: "^4.0"
+            pest-plugin: "^4.0"
+          - php: "8.4"
+            laravel: "12.*"
+            testbench: "10.*"
+            pest: "^4.0"
+            pest-plugin: "^4.0"
+          - php: "8.4"
+            laravel: "13.*"
+            testbench: "11.*"
+            pest: "^5.0"
+            pest-plugin: "^5.0"
+          - php: "8.5"
+            laravel: "12.*"
+            testbench: "10.*"
+            pest: "^4.0"
+            pest-plugin: "^4.0"
+          - php: "8.5"
+            laravel: "13.*"
+            testbench: "11.*"
+            pest: "^5.0"
+            pest-plugin: "^5.0"
+
+    name: PHP ${{ matrix.php }} · Laravel ${{ matrix.laravel }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: curl, mbstring, openssl, sqlite
+          coverage: none
+
+      - name: Install dependencies
+        run: |
+          # Every published Laravel 11 release is currently flagged by Packagist
+          # security advisories, so Composer will not install 11.* unless this
+          # job opts out. Laravel 12 and 13 stay on the default block.
+          if [ "${{ matrix.laravel }}" = "11.*" ]; then
+            composer config policy.advisories.block false
+          fi
+          composer require \
+            "laravel/framework:${{ matrix.laravel }}" \
+            "orchestra/testbench:${{ matrix.testbench }}" \
+            "pestphp/pest:${{ matrix.pest }}" \
+            "pestphp/pest-plugin-laravel:${{ matrix.pest-plugin }}" \
+            --dev --no-interaction --no-update
+          composer update --prefer-dist --no-interaction --no-progress
+
+      - name: Pint
+        run: vendor/bin/pint --test
+
+      - name: PHPStan
+        run: vendor/bin/phpstan analyse --memory-limit=1G --no-progress
+
+      - name: Pest
+        run: vendor/bin/pest
