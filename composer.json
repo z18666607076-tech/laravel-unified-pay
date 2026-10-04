@@ -1,5 +1,5 @@
 {
-    "name": "freeman/laravel-unified-pay",
+    "name": "ziwen-zhao/laravel-unified-pay",
     "description": "One Laravel-native interface for WeChat Pay, Alipay, and Stripe, with signed webhooks and idempotent event handling.",
     "keywords": [
         "laravel",
@@ -39,12 +39,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Freeman\\UnifiedPay\\": "src/"
+            "ZiwenZhao\\UnifiedPay\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Freeman\\UnifiedPay\\Tests\\": "tests/"
+            "ZiwenZhao\\UnifiedPay\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -63,10 +63,10 @@
         },
         "laravel": {
             "providers": [
-                "Freeman\\UnifiedPay\\UnifiedPayServiceProvider"
+                "ZiwenZhao\\UnifiedPay\\UnifiedPayServiceProvider"
             ],
             "aliases": {
-                "Pay": "Freeman\\UnifiedPay\\Facades\\Pay"
+                "Pay": "ZiwenZhao\\UnifiedPay\\Facades\\Pay"
             }
         }
     },

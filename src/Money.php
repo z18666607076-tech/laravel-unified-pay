@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay;
+namespace ZiwenZhao\UnifiedPay;
 
 use InvalidArgumentException;
 

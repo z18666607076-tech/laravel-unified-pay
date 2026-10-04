@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Idempotency;
+namespace ZiwenZhao\UnifiedPay\Idempotency;
 
-use Freeman\UnifiedPay\Contracts\IdempotencyStore;
 use Illuminate\Cache\CacheManager;
 use Illuminate\Contracts\Cache\Repository;
+use ZiwenZhao\UnifiedPay\Contracts\IdempotencyStore;
 
 final class CacheIdempotencyStore implements IdempotencyStore
 {

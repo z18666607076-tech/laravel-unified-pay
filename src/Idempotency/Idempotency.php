@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Idempotency;
+namespace ZiwenZhao\UnifiedPay\Idempotency;
 
-use Freeman\UnifiedPay\Contracts\IdempotencyStore;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
 use Throwable;
+use ZiwenZhao\UnifiedPay\Contracts\IdempotencyStore;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
 
 final class Idempotency
 {

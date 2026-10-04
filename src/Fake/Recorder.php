@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Fake;
+namespace ZiwenZhao\UnifiedPay\Fake;
 
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\DTO\ProfitShareRequest;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareRequest;
 
 final class Recorder
 {

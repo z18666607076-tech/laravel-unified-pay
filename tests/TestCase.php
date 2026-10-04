@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Tests;
+namespace ZiwenZhao\UnifiedPay\Tests;
 
-use Freeman\UnifiedPay\UnifiedPayServiceProvider;
 use Illuminate\Foundation\Application;
 use Orchestra\Testbench\TestCase as Orchestra;
+use ZiwenZhao\UnifiedPay\UnifiedPayServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

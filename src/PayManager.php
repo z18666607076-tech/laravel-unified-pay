@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay;
+namespace ZiwenZhao\UnifiedPay;
 
-use Freeman\UnifiedPay\Alipay\Gateway as AlipayGateway;
-use Freeman\UnifiedPay\Contracts\Gateway;
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\DTO\ProfitShareRequest;
-use Freeman\UnifiedPay\Enums\Channel;
-use Freeman\UnifiedPay\Exceptions\AssertionFailedException;
-use Freeman\UnifiedPay\Fake\FakeGateway;
-use Freeman\UnifiedPay\Fake\FakeWechatGateway;
-use Freeman\UnifiedPay\Fake\Recorder;
-use Freeman\UnifiedPay\Http\WebhookController;
-use Freeman\UnifiedPay\Idempotency\Idempotency;
-use Freeman\UnifiedPay\Stripe\Gateway as StripeGateway;
-use Freeman\UnifiedPay\Wechat\Gateway as WechatGateway;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Routing\Router;
 use InvalidArgumentException;
+use ZiwenZhao\UnifiedPay\Alipay\Gateway as AlipayGateway;
+use ZiwenZhao\UnifiedPay\Contracts\Gateway;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareRequest;
+use ZiwenZhao\UnifiedPay\Enums\Channel;
+use ZiwenZhao\UnifiedPay\Exceptions\AssertionFailedException;
+use ZiwenZhao\UnifiedPay\Fake\FakeGateway;
+use ZiwenZhao\UnifiedPay\Fake\FakeWechatGateway;
+use ZiwenZhao\UnifiedPay\Fake\Recorder;
+use ZiwenZhao\UnifiedPay\Http\WebhookController;
+use ZiwenZhao\UnifiedPay\Idempotency\Idempotency;
+use ZiwenZhao\UnifiedPay\Stripe\Gateway as StripeGateway;
+use ZiwenZhao\UnifiedPay\Wechat\Gateway as WechatGateway;
 
 final class PayManager
 {

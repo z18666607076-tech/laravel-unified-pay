@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Alipay;
+namespace ZiwenZhao\UnifiedPay\Alipay;
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Support\KeyMaterial;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Support\KeyMaterial;
 
 final class Credentials
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Testing;
+namespace ZiwenZhao\UnifiedPay\Testing;
 
-use Freeman\UnifiedPay\Alipay\Signer as AlipaySigner;
-use Freeman\UnifiedPay\Support\Json;
-use Freeman\UnifiedPay\Wechat\Cipher;
-use Freeman\UnifiedPay\Wechat\Signer as WechatSigner;
+use ZiwenZhao\UnifiedPay\Alipay\Signer as AlipaySigner;
+use ZiwenZhao\UnifiedPay\Support\Json;
+use ZiwenZhao\UnifiedPay\Wechat\Cipher;
+use ZiwenZhao\UnifiedPay\Wechat\Signer as WechatSigner;
 
 /**
  * Build signed webhook fixtures in tests. Keys are arguments, never read from disk by this class.

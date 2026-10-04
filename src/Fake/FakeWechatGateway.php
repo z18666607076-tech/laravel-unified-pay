@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Fake;
+namespace ZiwenZhao\UnifiedPay\Fake;
 
-use Freeman\UnifiedPay\Contracts\ProfitSharingGateway;
-use Freeman\UnifiedPay\DTO\ProfitShareRequest;
-use Freeman\UnifiedPay\DTO\ProfitShareResult;
-use Freeman\UnifiedPay\Enums\Channel;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
-use Freeman\UnifiedPay\Support\Values;
+use ZiwenZhao\UnifiedPay\Contracts\ProfitSharingGateway;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareRequest;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareResult;
+use ZiwenZhao\UnifiedPay\Enums\Channel;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Support\Values;
 
 final class FakeWechatGateway extends FakeGateway implements ProfitSharingGateway
 {

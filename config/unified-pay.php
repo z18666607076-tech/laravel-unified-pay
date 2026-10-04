@@ -16,7 +16,7 @@ return [
 
     'http' => [
         'timeout' => (int) env('UNIFIED_PAY_HTTP_TIMEOUT', 10),
-        'user_agent' => env('UNIFIED_PAY_USER_AGENT', 'freeman-laravel-unified-pay/0.1'),
+        'user_agent' => env('UNIFIED_PAY_USER_AGENT', 'ziwen-zhao-laravel-unified-pay/0.1'),
     ],
 
     /*

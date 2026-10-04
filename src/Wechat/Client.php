@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Wechat;
+namespace ZiwenZhao\UnifiedPay\Wechat;
 
-use Freeman\UnifiedPay\Exceptions\PaymentException;
-use Freeman\UnifiedPay\Exceptions\SignatureException;
-use Freeman\UnifiedPay\Support\Headers;
-use Freeman\UnifiedPay\Support\Json;
 use Illuminate\Http\Client\Factory;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Support\Headers;
+use ZiwenZhao\UnifiedPay\Support\Json;
 
 /**
  * Signed WeChat Pay API v3 HTTP calls. Responses are verified with the platform public key.
@@ -178,6 +178,6 @@ final class Client
     {
         $agent = config('unified-pay.http.user_agent');
 
-        return is_string($agent) && $agent !== '' ? $agent : 'freeman-laravel-unified-pay/0.1';
+        return is_string($agent) && $agent !== '' ? $agent : 'ziwen-zhao-laravel-unified-pay/0.1';
     }
 }

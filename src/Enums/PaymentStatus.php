@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Enums;
+namespace ZiwenZhao\UnifiedPay\Enums;
 
 enum PaymentStatus: string
 {

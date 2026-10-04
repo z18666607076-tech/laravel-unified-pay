@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Stripe;
+namespace ZiwenZhao\UnifiedPay\Stripe;
 
-use Freeman\UnifiedPay\Contracts\Gateway as PaymentGateway;
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\DTO\Payment;
-use Freeman\UnifiedPay\DTO\PaymentEvent;
-use Freeman\UnifiedPay\DTO\Refund;
-use Freeman\UnifiedPay\Enums\Channel;
-use Freeman\UnifiedPay\Enums\PaymentMode;
-use Freeman\UnifiedPay\Enums\PaymentStatus;
-use Freeman\UnifiedPay\Enums\RefundStatus;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
-use Freeman\UnifiedPay\Money;
-use Freeman\UnifiedPay\Support\Headers;
-use Freeman\UnifiedPay\Support\Values;
 use Illuminate\Http\Client\Factory;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
+use ZiwenZhao\UnifiedPay\Contracts\Gateway as PaymentGateway;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\DTO\Payment;
+use ZiwenZhao\UnifiedPay\DTO\PaymentEvent;
+use ZiwenZhao\UnifiedPay\DTO\Refund;
+use ZiwenZhao\UnifiedPay\Enums\Channel;
+use ZiwenZhao\UnifiedPay\Enums\PaymentMode;
+use ZiwenZhao\UnifiedPay\Enums\PaymentStatus;
+use ZiwenZhao\UnifiedPay\Enums\RefundStatus;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\Support\Headers;
+use ZiwenZhao\UnifiedPay\Support\Values;
 
 final class Gateway implements PaymentGateway
 {
@@ -385,6 +385,6 @@ final class Gateway implements PaymentGateway
     {
         $agent = config('unified-pay.http.user_agent');
 
-        return is_string($agent) && $agent !== '' ? $agent : 'freeman-laravel-unified-pay/0.1';
+        return is_string($agent) && $agent !== '' ? $agent : 'ziwen-zhao-laravel-unified-pay/0.1';
     }
 }

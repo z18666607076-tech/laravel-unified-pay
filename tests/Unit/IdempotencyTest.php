@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Freeman\UnifiedPay\Facades\Pay;
-use Freeman\UnifiedPay\Idempotency\CacheIdempotencyStore;
-use Freeman\UnifiedPay\Idempotency\DatabaseIdempotencyStore;
 use Illuminate\Cache\CacheManager;
 use Illuminate\Database\DatabaseManager;
+use ZiwenZhao\UnifiedPay\Facades\Pay;
+use ZiwenZhao\UnifiedPay\Idempotency\CacheIdempotencyStore;
+use ZiwenZhao\UnifiedPay\Idempotency\DatabaseIdempotencyStore;
 
 it('runs a callback once and releases the claim when it throws', function () {
     $idempotency = Pay::idempotency();

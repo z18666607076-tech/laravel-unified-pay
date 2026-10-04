@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Stripe;
+namespace ZiwenZhao\UnifiedPay\Stripe;
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
 
 final class Credentials
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Contracts;
+namespace ZiwenZhao\UnifiedPay\Contracts;
 
 interface IdempotencyStore
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\DTO;
+namespace ZiwenZhao\UnifiedPay\DTO;
 
 final readonly class ProfitShareReceiver
 {

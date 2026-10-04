@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Idempotency;
+namespace ZiwenZhao\UnifiedPay\Idempotency;
 
-use Freeman\UnifiedPay\Contracts\IdempotencyStore;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Throwable;
+use ZiwenZhao\UnifiedPay\Contracts\IdempotencyStore;
 
 final class DatabaseIdempotencyStore implements IdempotencyStore
 {

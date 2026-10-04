@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Exceptions;
+namespace ZiwenZhao\UnifiedPay\Exceptions;
 
 use RuntimeException;
 
