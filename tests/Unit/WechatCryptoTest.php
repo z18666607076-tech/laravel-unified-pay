@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Exceptions\SignatureException;
-use Freeman\UnifiedPay\Testing\WebhookFactory;
-use Freeman\UnifiedPay\Tests\Support\PaymentConfig;
-use Freeman\UnifiedPay\Tests\Support\RsaKeyPair;
-use Freeman\UnifiedPay\Wechat\Cipher;
-use Freeman\UnifiedPay\Wechat\NotificationParser;
-use Freeman\UnifiedPay\Wechat\Signer;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Testing\WebhookFactory;
+use ZiwenZhao\UnifiedPay\Tests\Support\PaymentConfig;
+use ZiwenZhao\UnifiedPay\Tests\Support\RsaKeyPair;
+use ZiwenZhao\UnifiedPay\Wechat\Cipher;
+use ZiwenZhao\UnifiedPay\Wechat\NotificationParser;
+use ZiwenZhao\UnifiedPay\Wechat\Signer;
 
 it('signs wechat requests and mini program params with rsa', function () {
     $keys = RsaKeyPair::merchant();

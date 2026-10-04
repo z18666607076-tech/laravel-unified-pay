@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Freeman\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\Money;
 
 it('keeps money in minor units', function () {
     $money = Money::of(1234, 'cny');

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Stripe;
+namespace ZiwenZhao\UnifiedPay\Stripe;
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Exceptions\SignatureException;
-use Freeman\UnifiedPay\Support\Json;
-use Freeman\UnifiedPay\Support\Values;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Support\Json;
+use ZiwenZhao\UnifiedPay\Support\Values;
 
 final class WebhookVerifier
 {

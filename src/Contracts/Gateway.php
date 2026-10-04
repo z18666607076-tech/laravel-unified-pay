@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Contracts;
+namespace ZiwenZhao\UnifiedPay\Contracts;
 
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\DTO\Payment;
-use Freeman\UnifiedPay\DTO\PaymentEvent;
-use Freeman\UnifiedPay\DTO\Refund;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\DTO\Payment;
+use ZiwenZhao\UnifiedPay\DTO\PaymentEvent;
+use ZiwenZhao\UnifiedPay\DTO\Refund;
 
 interface Gateway
 {

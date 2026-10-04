@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Tests\Support;
+namespace ZiwenZhao\UnifiedPay\Tests\Support;
 
 use RuntimeException;
 

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Alipay;
+namespace ZiwenZhao\UnifiedPay\Alipay;
 
-use Freeman\UnifiedPay\DTO\PaymentEvent;
-use Freeman\UnifiedPay\Enums\Channel;
-use Freeman\UnifiedPay\Enums\PaymentEventType;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
-use Freeman\UnifiedPay\Exceptions\SignatureException;
-use Freeman\UnifiedPay\Money;
-use Freeman\UnifiedPay\Support\Values;
+use ZiwenZhao\UnifiedPay\DTO\PaymentEvent;
+use ZiwenZhao\UnifiedPay\Enums\Channel;
+use ZiwenZhao\UnifiedPay\Enums\PaymentEventType;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\Support\Values;
 
 final class NotificationParser
 {

@@ -7,6 +7,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [0.1.0] - 2026-10-04
 
+Initial release of `ziwen-zhao/laravel-unified-pay`. PHP namespace `ZiwenZhao\UnifiedPay`. Facade alias `Pay` (`ZiwenZhao\UnifiedPay\Facades\Pay`).
+
 ### Added
 
 - `Pay::driver('wechat'|'alipay'|'stripe')` with create, query, close, refund, and query refund.

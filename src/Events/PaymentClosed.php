@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Events;
+namespace ZiwenZhao\UnifiedPay\Events;
 
-use Freeman\UnifiedPay\DTO\PaymentEvent;
+use ZiwenZhao\UnifiedPay\DTO\PaymentEvent;
 
 final readonly class PaymentClosed
 {

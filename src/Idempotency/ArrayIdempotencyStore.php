@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Idempotency;
+namespace ZiwenZhao\UnifiedPay\Idempotency;
 
-use Freeman\UnifiedPay\Contracts\IdempotencyStore;
+use ZiwenZhao\UnifiedPay\Contracts\IdempotencyStore;
 
 /**
  * Process-local store. Use it in tests. Do not use it across PHP processes.

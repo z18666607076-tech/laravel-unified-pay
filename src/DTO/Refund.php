@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\DTO;
+namespace ZiwenZhao\UnifiedPay\DTO;
 
-use Freeman\UnifiedPay\Enums\RefundStatus;
-use Freeman\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\Enums\RefundStatus;
+use ZiwenZhao\UnifiedPay\Money;
 
 final readonly class Refund
 {

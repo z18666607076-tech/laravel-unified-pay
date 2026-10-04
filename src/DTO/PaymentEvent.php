@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\DTO;
+namespace ZiwenZhao\UnifiedPay\DTO;
 
-use Freeman\UnifiedPay\Enums\PaymentEventType;
-use Freeman\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\Enums\PaymentEventType;
+use ZiwenZhao\UnifiedPay\Money;
 
 /**
  * A provider notification after the signature (and, for WeChat, the ciphertext)

@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Fake;
+namespace ZiwenZhao\UnifiedPay\Fake;
 
-use Freeman\UnifiedPay\Contracts\Gateway as PaymentGateway;
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\DTO\Payment;
-use Freeman\UnifiedPay\DTO\PaymentEvent;
-use Freeman\UnifiedPay\DTO\Refund;
-use Freeman\UnifiedPay\Enums\PaymentEventType;
-use Freeman\UnifiedPay\Enums\PaymentMode;
-use Freeman\UnifiedPay\Enums\PaymentStatus;
-use Freeman\UnifiedPay\Enums\RefundStatus;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
-use Freeman\UnifiedPay\Money;
-use Freeman\UnifiedPay\Support\Json;
-use Freeman\UnifiedPay\Support\Values;
+use ZiwenZhao\UnifiedPay\Contracts\Gateway as PaymentGateway;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\DTO\Payment;
+use ZiwenZhao\UnifiedPay\DTO\PaymentEvent;
+use ZiwenZhao\UnifiedPay\DTO\Refund;
+use ZiwenZhao\UnifiedPay\Enums\PaymentEventType;
+use ZiwenZhao\UnifiedPay\Enums\PaymentMode;
+use ZiwenZhao\UnifiedPay\Enums\PaymentStatus;
+use ZiwenZhao\UnifiedPay\Enums\RefundStatus;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\Support\Json;
+use ZiwenZhao\UnifiedPay\Support\Values;
 
 class FakeGateway implements PaymentGateway
 {

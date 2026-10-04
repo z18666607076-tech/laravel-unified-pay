@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Wechat;
+namespace ZiwenZhao\UnifiedPay\Wechat;
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
 
 /**
  * AEAD_AES_256_GCM as used by WeChat Pay API v3 notifications.

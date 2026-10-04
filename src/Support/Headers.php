@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Support;
+namespace ZiwenZhao\UnifiedPay\Support;
 
 final class Headers
 {

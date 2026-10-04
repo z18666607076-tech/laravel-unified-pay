@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Support;
+namespace ZiwenZhao\UnifiedPay\Support;
 
-use Freeman\UnifiedPay\Exceptions\PaymentException;
 use JsonException;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
 
 final class Json
 {

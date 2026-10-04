@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay;
+namespace ZiwenZhao\UnifiedPay;
 
-use Freeman\UnifiedPay\Contracts\IdempotencyStore;
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Idempotency\ArrayIdempotencyStore;
-use Freeman\UnifiedPay\Idempotency\CacheIdempotencyStore;
-use Freeman\UnifiedPay\Idempotency\DatabaseIdempotencyStore;
-use Freeman\UnifiedPay\Idempotency\Idempotency;
 use Illuminate\Cache\CacheManager;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\ServiceProvider;
+use ZiwenZhao\UnifiedPay\Contracts\IdempotencyStore;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Idempotency\ArrayIdempotencyStore;
+use ZiwenZhao\UnifiedPay\Idempotency\CacheIdempotencyStore;
+use ZiwenZhao\UnifiedPay\Idempotency\DatabaseIdempotencyStore;
+use ZiwenZhao\UnifiedPay\Idempotency\Idempotency;
 
 class UnifiedPayServiceProvider extends ServiceProvider
 {

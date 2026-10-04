@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Contracts;
+namespace ZiwenZhao\UnifiedPay\Contracts;
 
-use Freeman\UnifiedPay\DTO\ProfitShareRequest;
-use Freeman\UnifiedPay\DTO\ProfitShareResult;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareRequest;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareResult;
 
 /**
  * Optional capability. WeChat Pay implements it. Check with instanceof

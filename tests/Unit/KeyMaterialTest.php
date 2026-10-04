@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Support\KeyMaterial;
-use Freeman\UnifiedPay\Tests\Support\RsaKeyPair;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Support\KeyMaterial;
+use ZiwenZhao\UnifiedPay\Tests\Support\RsaKeyPair;
 
 it('loads a pem, a raw base64 key, and a file path', function () {
     $keys = RsaKeyPair::generate();

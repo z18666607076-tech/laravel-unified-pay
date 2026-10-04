@@ -7,9 +7,9 @@ One Laravel-native interface for WeChat Pay (API v3), Alipay (Open Platform, RSA
 [![Laravel](https://img.shields.io/badge/Laravel-11%20%7C%2012%20%7C%2013-FF2D20)](https://laravel.com)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-The Packagist name in this repository, `freeman/laravel-unified-pay`, is a placeholder. The badge below starts working after you publish under the vendor you own. See [Publish on Packagist](#publish-on-packagist).
+The Packagist name is `ziwen-zhao/laravel-unified-pay`. The PHP namespace is `ZiwenZhao\UnifiedPay`. The version badge starts working after the repository is submitted to Packagist and `v0.1.0` is tagged. See [Publish on Packagist](#publish-on-packagist).
 
-[![Packagist Version](https://img.shields.io/packagist/v/freeman/laravel-unified-pay.svg)](https://packagist.org/packages/freeman/laravel-unified-pay)
+[![Packagist Version](https://img.shields.io/packagist/v/ziwen-zhao/laravel-unified-pay.svg)](https://packagist.org/packages/ziwen-zhao/laravel-unified-pay)
 
 ## What this is
 
@@ -34,13 +34,13 @@ As of October 2026, Packagist security advisories cover every published Laravel 
 ## Install
 
 ```bash
-composer require freeman/laravel-unified-pay
+composer require ziwen-zhao/laravel-unified-pay
 ```
 
-Replace `freeman` with your Packagist vendor after you publish. Laravel discovers the service provider and the `Pay` alias. If another package already aliases `Pay` (for example yansongda/laravel-pay), import the facade yourself:
+Laravel discovers the service provider and the `Pay` alias (`ZiwenZhao\UnifiedPay\Facades\Pay`). If another package already aliases `Pay` (for example yansongda/laravel-pay), import the facade yourself:
 
 ```php
-use Freeman\UnifiedPay\Facades\Pay;
+use ZiwenZhao\UnifiedPay\Facades\Pay;
 ```
 
 Publish the config, and publish the migration only if you want the database idempotency store:
@@ -82,7 +82,7 @@ STRIPE_WEBHOOK_SECRET=
 Register the webhook routes in `routes/api.php` so they sit on the `api` middleware group and skip CSRF:
 
 ```php
-use Freeman\UnifiedPay\Facades\Pay;
+use ZiwenZhao\UnifiedPay\Facades\Pay;
 
 Pay::routes();
 ```
@@ -100,12 +100,12 @@ Failed signature checks return an error and do not dispatch an event. Set `UNIFI
 ## Quick start
 
 ```php
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\Enums\PaymentMode;
-use Freeman\UnifiedPay\Events\PaymentSucceeded;
-use Freeman\UnifiedPay\Facades\Pay;
-use Freeman\UnifiedPay\Money;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\Enums\PaymentMode;
+use ZiwenZhao\UnifiedPay\Events\PaymentSucceeded;
+use ZiwenZhao\UnifiedPay\Facades\Pay;
+use ZiwenZhao\UnifiedPay\Money;
 
 $payment = Pay::driver('wechat')->create(new CreatePayment(
     outTradeNo: 'ORDER1001',
@@ -201,9 +201,9 @@ Search by `out_trade_no` uses `GET /v1/payment_intents/search`, which is eventua
 Turn it on when creating the payment (`profitSharing: true` sets `settle_info.profit_sharing`). The WeChat driver implements `ProfitSharingGateway`. The others do not, including under `Pay::fake()`.
 
 ```php
-use Freeman\UnifiedPay\Contracts\ProfitSharingGateway;
-use Freeman\UnifiedPay\DTO\ProfitShareReceiver;
-use Freeman\UnifiedPay\DTO\ProfitShareRequest;
+use ZiwenZhao\UnifiedPay\Contracts\ProfitSharingGateway;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareReceiver;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareRequest;
 
 $driver = Pay::driver('wechat');
 
@@ -238,7 +238,7 @@ The controller verifies the body, claims the provider event id, then dispatches:
 Anything else becomes `PaymentEventType::Ignored` and does not dispatch. Each event carries a `PaymentEvent` (`id`, `outTradeNo`, `outRefundNo`, `providerReference`, `money`, `rawStatus`).
 
 ```php
-use Freeman\UnifiedPay\Events\PaymentSucceeded;
+use ZiwenZhao\UnifiedPay\Events\PaymentSucceeded;
 use Illuminate\Support\Facades\Event;
 
 Event::listen(PaymentSucceeded::class, function (PaymentSucceeded $event): void {
@@ -267,7 +267,7 @@ The webhook controller already does this. Call `once()` yourself when you verify
 ## Testing with fakes
 
 ```php
-use Freeman\UnifiedPay\Facades\Pay;
+use ZiwenZhao\UnifiedPay\Facades\Pay;
 
 Pay::fake(); // or Pay::fake(['wechat'])
 
@@ -298,7 +298,7 @@ $this->postJson('/unified-pay/stripe', [
 ]);
 ```
 
-To hit the real verifiers from an application test, build a fixture with `Freeman\UnifiedPay\Testing\WebhookFactory`. Pass keys in; the factory does not read them from disk.
+To hit the real verifiers from an application test, build a fixture with `ZiwenZhao\UnifiedPay\Testing\WebhookFactory`. Pass keys in; the factory does not read them from disk.
 
 ## Errors
 
@@ -333,24 +333,21 @@ composer check
 
 ## Publish on Packagist
 
-The owner of the GitHub repository does this once. It is not done by the 0.1 pull request.
+The package name is `ziwen-zhao/laravel-unified-pay` and the PHP namespace is `ZiwenZhao\UnifiedPay`. The `Pay` facade alias points at `ZiwenZhao\UnifiedPay\Facades\Pay`. This repository does not create the `v0.1.0` tag. The repository owner publishes once:
 
-1. Pick a Packagist vendor you control. `freeman` in `composer.json` is a suggestion, not a registered name.
-2. Before the first tag, set `"name": "your-vendor/laravel-unified-pay"` in `composer.json`. If you also change the PHP vendor, rename the `Freeman\` namespace and the `Pay` alias, then retarget the tests. Doing that after `v0.1.0` is a breaking change.
-3. Push the repository to GitHub.
-4. Create a Packagist account and submit the repository URL.
-5. Enable the Packagist GitHub service hook so new tags update the package automatically.
-6. Tag the release. Packagist versions come from git tags, not from `composer.json`:
+1. Create a Packagist account and submit `https://github.com/z18666607076-tech/laravel-unified-pay`.
+2. Enable the Packagist GitHub service hook so new tags update the package automatically.
+3. Tag the release yourself. Packagist versions come from git tags, not from `composer.json`:
 
    ```bash
    git tag v0.1.0
    git push origin v0.1.0
    ```
 
-7. Confirm the package page, then in an application:
+4. Confirm the package page, then in an application:
 
    ```bash
-   composer require your-vendor/laravel-unified-pay
+   composer require ziwen-zhao/laravel-unified-pay
    ```
 
 ## License

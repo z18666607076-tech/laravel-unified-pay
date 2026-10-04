@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Facades;
+namespace ZiwenZhao\UnifiedPay\Facades;
 
-use Freeman\UnifiedPay\Contracts\Gateway;
-use Freeman\UnifiedPay\DTO\CreatePayment;
-use Freeman\UnifiedPay\DTO\CreateRefund;
-use Freeman\UnifiedPay\DTO\ProfitShareRequest;
-use Freeman\UnifiedPay\Enums\Channel;
-use Freeman\UnifiedPay\Idempotency\Idempotency;
-use Freeman\UnifiedPay\PayManager;
 use Illuminate\Support\Facades\Facade;
+use ZiwenZhao\UnifiedPay\Contracts\Gateway;
+use ZiwenZhao\UnifiedPay\DTO\CreatePayment;
+use ZiwenZhao\UnifiedPay\DTO\CreateRefund;
+use ZiwenZhao\UnifiedPay\DTO\ProfitShareRequest;
+use ZiwenZhao\UnifiedPay\Enums\Channel;
+use ZiwenZhao\UnifiedPay\Idempotency\Idempotency;
+use ZiwenZhao\UnifiedPay\PayManager;
 
 /**
  * @method static Gateway driver(string|Channel $channel)

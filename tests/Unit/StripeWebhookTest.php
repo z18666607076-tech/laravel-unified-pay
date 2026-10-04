@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Freeman\UnifiedPay\Exceptions\SignatureException;
-use Freeman\UnifiedPay\Stripe\NotificationParser;
-use Freeman\UnifiedPay\Stripe\WebhookVerifier;
-use Freeman\UnifiedPay\Testing\WebhookFactory;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Stripe\NotificationParser;
+use ZiwenZhao\UnifiedPay\Stripe\WebhookVerifier;
+use ZiwenZhao\UnifiedPay\Testing\WebhookFactory;
 
 it('verifies a stripe webhook signature and rejects a bad one', function () {
     $secret = 'whsec_test_secret';

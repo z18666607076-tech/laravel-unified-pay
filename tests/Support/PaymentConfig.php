@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Tests\Support;
+namespace ZiwenZhao\UnifiedPay\Tests\Support;
 
-use Freeman\UnifiedPay\Alipay\Signer as AlipaySigner;
-use Freeman\UnifiedPay\Wechat\Signer as WechatSigner;
 use GuzzleHttp\Promise\PromiseInterface;
 use Illuminate\Support\Facades\Http;
+use ZiwenZhao\UnifiedPay\Alipay\Signer as AlipaySigner;
+use ZiwenZhao\UnifiedPay\Wechat\Signer as WechatSigner;
 
 final class PaymentConfig
 {

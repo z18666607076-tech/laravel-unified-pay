@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Alipay;
+namespace ZiwenZhao\UnifiedPay\Alipay;
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
-use Freeman\UnifiedPay\Exceptions\SignatureException;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Exceptions\SignatureException;
 
 /**
  * Alipay Open Platform RSA2 (SHA256WithRSA).

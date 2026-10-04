@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Support;
+namespace ZiwenZhao\UnifiedPay\Support;
 
-use Freeman\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
 
 final class Values
 {

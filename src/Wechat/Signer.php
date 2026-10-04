@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Freeman\UnifiedPay\Wechat;
+namespace ZiwenZhao\UnifiedPay\Wechat;
 
-use Freeman\UnifiedPay\Exceptions\ConfigurationException;
-use Freeman\UnifiedPay\Exceptions\PaymentException;
+use ZiwenZhao\UnifiedPay\Exceptions\ConfigurationException;
+use ZiwenZhao\UnifiedPay\Exceptions\PaymentException;
 
 /**
  * WeChat Pay API v3 request, client, and notification signatures.
