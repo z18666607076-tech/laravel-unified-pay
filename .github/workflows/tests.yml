@@ -70,6 +70,12 @@ jobs:
 
       - name: Install dependencies
         run: |
+          # Every published Laravel 11 release is currently flagged by Packagist
+          # security advisories, so Composer will not install 11.* unless this
+          # job opts out. Laravel 12 and 13 stay on the default block.
+          if [ "${{ matrix.laravel }}" = "11.*" ]; then
+            composer config policy.advisories.block false
+          fi
           composer require \
             "laravel/framework:${{ matrix.laravel }}" \
             "orchestra/testbench:${{ matrix.testbench }}" \

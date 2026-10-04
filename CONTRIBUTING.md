@@ -21,7 +21,7 @@ vendor/bin/phpstan analyse --memory-limit=1G
 vendor/bin/pest
 ```
 
-The CI matrix installs Laravel 11, 12, and 13 on PHP 8.3, 8.4, and 8.5 via Orchestra Testbench. Pest 5 is used only where it is supported (PHP 8.4+ and Laravel 13). Older cells use Pest 3 or 4. See `.github/workflows/tests.yml`.
+The CI matrix installs Laravel 11, 12, and 13 on PHP 8.3, 8.4, and 8.5 via Orchestra Testbench, except Laravel 11 on PHP 8.5. Pest 5 is used only where it is supported (PHP 8.4+ and Laravel 13). Older cells use Pest 3 or 4. The Laravel 11 jobs set `policy.advisories.block` to false because Composer currently refuses every published 11.x release. See `.github/workflows/tests.yml`.
 
 ## Tests
 

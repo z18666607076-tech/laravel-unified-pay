@@ -29,6 +29,8 @@ This was built against the public protocol documents (WeChat Pay API v3, Alipay 
 
 CI runs Orchestra Testbench on that matrix. Pest 5 requires PHP 8.4 and Laravel 13, so the PHP 8.3 cells and the Laravel 11/12 cells use Pest 3 or 4. Laravel 11 on PHP 8.5 is not in the matrix: 11 is security-only and is not a combination this package claims.
 
+As of October 2026, Packagist security advisories cover every published Laravel 11 release, and Composer will not install `11.*` unless `policy.advisories.block` is turned off. The Laravel 11 CI jobs do that so the suite still runs. Laravel 12 and 13 jobs keep the default block. Prefer 12 or 13 for a new application.
+
 ## Install
 
 ```bash
